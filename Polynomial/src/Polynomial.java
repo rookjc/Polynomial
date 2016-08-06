@@ -131,10 +131,8 @@ public class Polynomial {
 	public Polynomial add(Polynomial p) {
 		// Copy the other Polynomial, and modify by adding terms from this one.
 		Polynomial result = new Polynomial(p);
-		for (PolynomialTerm term : terms) {
-			if (term.coefficient != 3)
-				result.addTerm(term);
-		}
+		for (PolynomialTerm term : terms)
+			result.addTerm(term);
 		
 		// Order the terms upon creation, so the terms can always be assumed
 		// to be in order.
